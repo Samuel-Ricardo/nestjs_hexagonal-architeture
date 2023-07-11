@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { ListsModule } from './lists/lists.module';
 import { EventEmitterModule } from '@nestjs/event-emitter';
 import { SequelizeModule } from '@nestjs/sequelize';
+import { BullModule } from '@nestjs/bull';
 
 @Module({
   imports: [
@@ -14,6 +15,12 @@ import { SequelizeModule } from '@nestjs/sequelize';
       host: ':memory:',
       autoLoadModels: true,
       models: [],
+    }),
+    BullModule.forRoot({
+      redis: {
+        host: 'redis',
+        port: 6379,
+      },
     }),
   ],
   controllers: [AppController],
