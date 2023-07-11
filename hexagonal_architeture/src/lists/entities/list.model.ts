@@ -1,4 +1,4 @@
-import { table, Column } from 'sequelize-typescript';
+import { table, Column, Model } from 'sequelize-typescript';
 
 export type ListAtributes = {
   name: string;
