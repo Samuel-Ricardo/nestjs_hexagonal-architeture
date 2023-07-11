@@ -25,4 +25,12 @@ export class ListGatewayHttp implements ListGatewayInterface {
 
     return data.map((d) => new List(d.name, d.id));
   }
+
+  async findById(id: number): Promise<List> {
+    const { data } = await lastValueFrom(
+      this.httpService.get<any>(`list/${id}`),
+    );
+
+    return new List(data.name, data.id);
+  }
 }
