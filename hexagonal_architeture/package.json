@@ -9,7 +9,7 @@
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
-    "start:docker": "npm run start:dev",
+    "start:docker": "npm run start:dev && npm run mock:api",
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
@@ -20,7 +20,8 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "husky:prepare": "cd ../ && husky install"
+    "husky:prepare": "cd ../ && husky install",
+    "mock:api": "json-server --watch ./crm.json --port 8000"
   },
   "dependencies": {
     "@nestjs/axios": "^3.0.0",
