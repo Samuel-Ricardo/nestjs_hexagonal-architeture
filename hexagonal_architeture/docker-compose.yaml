@@ -3,9 +3,19 @@ version: '3'
 services:
   app:
     build: .
+    entrypoint: npm run start:docker
     ports:
       - '3000:3000'
-      - '8000:8000'
+    volumes:
+      - .:/home/node/app
+    depends_on:
+      - redis
+
+  crm:
+    build: .
+    entrypoint: npm run mock:api
+    ports:
+      - 8000:8000
     volumes:
       - .:/home/node/app
 
