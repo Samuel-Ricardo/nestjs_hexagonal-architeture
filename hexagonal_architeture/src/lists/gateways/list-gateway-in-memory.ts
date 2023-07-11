@@ -9,4 +9,8 @@ export class ListGatewayInMemory implements ListGatewayInterface {
     this.items.push(list);
     return list;
   }
+
+  async findAll(): Promise<List[]> {
+    return this.items;
+  }
 }
