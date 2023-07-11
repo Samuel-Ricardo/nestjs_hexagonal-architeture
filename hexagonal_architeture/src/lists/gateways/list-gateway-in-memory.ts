@@ -13,4 +13,12 @@ export class ListGatewayInMemory implements ListGatewayInterface {
   async findAll(): Promise<List[]> {
     return this.items;
   }
+
+  async findById(id: number): Promise<List> {
+    const list = this.items.find((item) => item.id === id);
+
+    if (!list) throw new Error('List not found');
+
+    return list;
+  }
 }
