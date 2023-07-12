@@ -17,7 +17,7 @@ import { BullModule } from '@nestjs/bull';
   imports: [
     SequelizeModule.forFeature([ListModel]),
     HttpModule.register({
-      baseURL: 'http://localhost:8000/',
+      baseURL: 'http://crm:8000/',
     }),
     BullModule.registerQueue({
       name: 'default',
@@ -37,7 +37,7 @@ import { BullModule } from '@nestjs/bull';
       useExisting: ListGatewaySequelize,
     },
     {
-      provide: 'ListIntegrationGateway',
+      provide: 'listIntegrationGateway',
       useExisting: ListGatewayHttp,
     },
     {

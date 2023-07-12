@@ -11,7 +11,7 @@ export class ListGatewaySequelize implements ListGatewayInterface {
     private listModel: typeof ListModel,
   ) {}
 
-  async create(list: ListModel): Promise<List> {
+  async create(list: List): Promise<List> {
     const newList = await this.listModel.create(list);
     list.id = newList.id;
     return list;
@@ -22,8 +22,8 @@ export class ListGatewaySequelize implements ListGatewayInterface {
     return listsModels.map((list) => new List(list.name, list.id));
   }
 
-  async findById(): Promise<List> {
-    const listModel = await this.listModel.findOne({ where: { id: 1 } });
+  async findById(id: number): Promise<List> {
+    const listModel = await this.listModel.findByPk(id);
     if (!listModel) throw new Error('List not found');
     return new List(listModel.name, listModel.id);
   }
