@@ -1,10 +1,10 @@
-import { table, Column, Model } from 'sequelize-typescript';
+import { Table, Column, Model } from 'sequelize-typescript';
 
 export type ListAtributes = {
   name: string;
 };
 
-@table
+@Table
 export class ListModel extends Model<ListAtributes> {
   @Column
   name: string;
