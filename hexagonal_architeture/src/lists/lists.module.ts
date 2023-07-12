@@ -7,9 +7,23 @@ import { PublishListCreatedEvent } from './listeners/publish-list-created.listen
 import { CreateListInCrmJob } from './jobs/create-list-in-crm.job';
 import { EventEmitter } from 'stream';
 import { EventEmitter2 } from '@nestjs/event-emitter';
+import { SequelizeModule } from '@nestjs/sequelize';
+import { ListModel } from './entities/list.model';
+import { HttpModule } from '@nestjs/axios';
+import { BullModule } from '@nestjs/bull';
 // import { CreateListInCrmListener } from './listeners/create-list-in-crm.listener';
 
 @Module({
+  imports: [
+    SequelizeModule.forFeature([ListModel]),
+    HttpModule.register({
+      baseURL: 'http://localhost:8000/',
+    }),
+    BullModule.registerQueue({
+      name: 'default',
+      defaultJobOptions: { attempts: 1 },
+    }),
+  ],
   controllers: [ListsController],
   providers: [
     ListsService,
