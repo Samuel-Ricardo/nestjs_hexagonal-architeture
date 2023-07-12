@@ -1,15 +1,29 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, Inject } from '@nestjs/common';
 import { CreateListDto } from './dto/create-list.dto';
 import { UpdateListDto } from './dto/update-list.dto';
+import { ListGatewayInterface } from './gateways/list-gateway-interface';
+import { EventEmitter } from 'stream';
+import { List } from './entities/list.entity';
+import { ListCreatedEvent } from './events/list-created.events';
 
 @Injectable()
 export class ListsService {
-  create(createListDto: CreateListDto) {
-    return 'This action adds a new list';
+  constructor(
+    @Inject('ListPersistenceGateway')
+    private listPersistenceGateway: ListGatewayInterface, //porta ListGatewaySequelize
+    @Inject('EventEmitter')
+    private eventEmitter: EventEmitter,
+  ) {}
+
+  async create(createListDto: CreateListDto) {
+    const list = new List(createListDto.name);
+    await this.listPersistenceGateway.create(list);
+    this.eventEmitter.emit('list.created', new ListCreatedEvent(list));
+    return list;
   }
 
-  findAll() {
-    return `This action returns all lists`;
+  async findAll() {
+    return this.listPersistenceGateway.findAll();
   }
 
   findOne(id: number) {
