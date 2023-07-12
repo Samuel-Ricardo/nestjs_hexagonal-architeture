@@ -17,7 +17,7 @@ import { BullModule } from '@nestjs/bull';
   imports: [
     SequelizeModule.forFeature([ListModel]),
     HttpModule.register({
-      baseURL: 'http://crm:8000/',
+      baseURL: 'http://localhost:8000/',
     }),
     BullModule.registerQueue({
       name: 'default',

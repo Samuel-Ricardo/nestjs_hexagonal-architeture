@@ -13,7 +13,7 @@ export class ListGatewayHttp implements ListGatewayInterface {
 
   async create(list: List): Promise<List> {
     await lastValueFrom(
-      this.httpService.post('list', {
+      this.httpService.post('lists', {
         name: list.name,
       }),
     );
@@ -28,7 +28,7 @@ export class ListGatewayHttp implements ListGatewayInterface {
 
   async findById(id: number): Promise<List> {
     const { data } = await lastValueFrom(
-      this.httpService.get<any>(`list/${id}`),
+      this.httpService.get<any>(`lists/${id}`),
     );
 
     return new List(data.name, data.id);

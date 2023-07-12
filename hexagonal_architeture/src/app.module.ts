@@ -19,7 +19,7 @@ import { ListModel } from './lists/entities/list.model';
     }),
     BullModule.forRoot({
       redis: {
-        host: 'redis',
+        host: 'localhost',
         port: 6379,
       },
     }),
