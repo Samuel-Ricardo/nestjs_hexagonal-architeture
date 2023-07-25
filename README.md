@@ -148,7 +148,7 @@ Navigate to project folder `$ cd ./hexagonal_architeture/` and run it using `doc
 
 ```
 
-You can also run NestJS Directly without Docker [[HERE](https://github.com/Samuel-Ricardo/Routes_Manager-API/blob/main/route_manager/README.md)]
+You can also run NestJS Directly without Docker [[HERE](https://github.com/Samuel-Ricardo/nestjs_hexagonal-architeture/blob/main/hexagonal_architeture/README.md)]
 
 ```bash
 
