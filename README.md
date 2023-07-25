@@ -78,6 +78,8 @@ The hexagonal architecture consists of the philosophy of ports and adapters, suc
 
 This concept was applied to create an API that handles and sends the list data to a simulated CRM, for that, I used the event system to create event-listeners and emiters that on trigger send the data to a Queue with Bull & Redis and from the queue the API sends the data to the CRM.
 
+This project have a dev friendly ambient that provides a automatic code formarter and linting, tests, Documentation with Swagger and Docker containers
+
 <p id="routes"/>
 
 ```bash
