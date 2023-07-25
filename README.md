@@ -1,2 +1,33 @@
 # nestjs_hexagonal-architeture
-A NestJS API to integrate with a CRM build using Hexagonal Architeture
+
+<p align="center"> 
+  <a href="https://www.linkedin.com/in/samuel-ricardo/" target="_blank">
+    <img width="auto" src="https://cdn.webo.digital/uploads/2022/09/Nestjs_hero1.png"/>
+  </a> 
+</p>
+
+<h4 align="center" > 🚀 🟥 Discovery 🟥 🚀 </h4>
+
+<h4 align="center">
+  Application developed with the purpose of studying the NestJS Ecosystem and Hexagonal Architeture </a>
+</h4>
+
+#
+
+<p align="center">
+  |&nbsp;&nbsp;
+  <a style="color: #8a4af3;" href="#project">Overview</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a style="color: #8a4af3;" href="#techs">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a style="color: #8a4af3;" href="#app">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a style="color: #8a4af3;" href="#routes">Routes</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a style="color: #8a4af3;" href="#run-project">Run</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a style="color: #8a4af3;" href="#author">Author</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+</p>
+
+#
+
+<br>
+
+<p id="project"/>
+
+<h2>  | :artificial_satellite: About:  </h2>
