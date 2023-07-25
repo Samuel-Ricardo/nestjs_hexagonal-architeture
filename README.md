@@ -31,3 +31,13 @@
 <p id="project"/>
 
 <h2>  | :artificial_satellite: About:  </h2>
+
+<p>
+    This API target is to explore an <b>Hexagonal Architeture implementation</b> With NestJS Framework, furthuermore, this application simulate a relation with a marketing CRM that consume data from this API.
+</p>
+
+<br>
+
+<h2 id="techs">
+  :building_construction: | Technologies and Concepts Studied:
+</h2>
