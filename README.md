@@ -41,3 +41,32 @@
 <h2 id="techs">
   :building_construction: | Technologies and Concepts Studied:
 </h2>
+
+> <a href='https://nestjs.com/'> <img width="48px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-plain-wordmark.svg" /> </a>
+
+- NestJS - [Express]
+- Docker
+- Sequelize
+- SQLite
+- Redis
+- Bull - [Queues]
+- Event-Emmiter
+- Swagger | [Documentation]
+- JS | Typescript
+- Test | Jest
+- Axios
+- eslint
+- prettier
+- husky
+- lint-sataged
+- @swc | [Rust Compiler]
+
+> Among Others...
+
+<br>
+
+#
+
+<h2 id="app">
+  💻 | Application:
+</h2>
