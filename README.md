@@ -55,6 +55,7 @@
 - JS | Typescript
 - Test | Jest
 - Axios
+- json-server
 - eslint
 - prettier
 - husky
@@ -70,3 +71,36 @@
 <h2 id="app">
   💻 | Application:
 </h2>
+
+<img src="https://miro.medium.com/v2/resize:fit:818/1*aGCx1q4rO5Uny9AauDCqyw.png"/>
+
+The hexagonal architecture consists of the philosophy of ports and adapters, such as the usb-c port on your phone that accepts all types of usb-c compatible chargers.
+
+This concept was applied to create an API that handles and sends the list data to a simulated CRM, for that, I used the event system to create event-listeners and emiters that on trigger send the data to a Queue with Bull & Redis and from the queue the API sends the data to the CRM.
+
+<p id="routes"/>
+
+```bash
+
+$ hexagonal_architeture > api.http
+
+
+###
+GET http://localhost:3000/lists
+
+
+###
+GET http://localhost:3000/lists/3
+
+###
+POST http://localhost:3000/lists
+Content-Type: application/json
+
+{
+  "name": "My List2"
+}
+
+###
+GET http://localhost:8000/lists
+
+```
